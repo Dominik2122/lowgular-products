@@ -1,0 +1,7 @@
+<ng-container *ngIf="product$ | push as product; else noProduct">
+<h3>{{product.title}} - {{product.price}}</h3>
+<p>{{product.description}}</p>
+</ng-container>
+<ng-template #noProduct>
+  <p>Sorry, no product</p>
+</ng-template>

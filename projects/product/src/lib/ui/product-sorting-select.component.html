@@ -1,0 +1,12 @@
+<span style="font-size: 12px">
+  <mat-form-field appearance="fill">
+    <mat-label>Sort by</mat-label>
+    <mat-select (selectionChange)="onSelectSortOptionChanged($event.value)">
+      <mat-option [value]="null">No sorting</mat-option>
+      <mat-option *ngFor="let option of sortOptionDomains" [value]="option">
+        {{option.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</span>
+

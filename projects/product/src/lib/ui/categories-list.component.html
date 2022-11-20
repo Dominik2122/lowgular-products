@@ -1,0 +1,8 @@
+<mat-chip-list aria-label="Fish selection">
+  <mat-chip (click)="filterByCategory(null)">
+    Clear filter
+  </mat-chip>
+  <mat-chip *ngFor="let item of categories$ | push" (click)="filterByCategory(item)">
+    {{item}}
+  </mat-chip>
+</mat-chip-list>

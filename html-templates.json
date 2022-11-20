@@ -31,6 +31,10 @@
       "list": "<mat-list role=\"list\" class=\"mat-elevation-z8\">$content$</mat-list>",
       "item": "<mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-item>"
     },
+    "list-with-empty-state": {
+      "list": "<mat-list *ngIf='$listVariable$ as list; else loading' role=\"list\" class=\"mat-elevation-z8\">$content$</mat-list><ng-template #loading>\n  <mat-spinner></mat-spinner>\n</ng-template>",
+      "item": "<ng-container *ngIf='list.length; else emptyList'><mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of list\">{{$itemVariable$}}</mat-list-item></ng-container><ng-template #emptyList>\n  <p>Sorry, no results :)</p>\n</ng-template>\n"
+    },
     "navbar": {
       "list": "<mat-list role=\"list\" fxLayout=\"row\">\n  $content$\n</mat-list>",
       "item": "<mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">\n  {{$itemVariable$}}\n</mat-list-item>"

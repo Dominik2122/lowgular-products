@@ -1,0 +1,183 @@
+{
+  "entityRelations": {
+    "page": {
+      "component": ["HTML"]
+    },
+    "component": {
+      "commandPort": ["CONSTRUCTOR"],
+      "queryPort": ["CONSTRUCTOR"],
+      "query": ["PROPERTY"],
+      "component": ["HTML"]
+    },
+    "directive": {
+      "commandPort": ["CONSTRUCTOR"],
+      "queryPort": ["CONSTRUCTOR"],
+      "query": ["PROPERTY"]
+    },
+    "resolver": {
+      "commandPort": ["CONSTRUCTOR"]
+    },
+    "guard": {
+      "queryPort": ["CONSTRUCTOR"],
+      "router": ["CONSTRUCTOR"]
+    },
+    "commandPort": {
+      "command": ["PARAMETER"]
+    },
+    "queryPort": {
+      "query": ["RETURN"]
+    },
+    "state": {
+      "queryPort": ["IMPLEMENTS"],
+      "commandPort": ["IMPLEMENTS"],
+      "dtoPort": ["CONSTRUCTOR"],
+      "eventPort": ["CONSTRUCTOR"],
+      "storagePort": ["CONSTRUCTOR"],
+      "query": ["RETURN"]
+    },
+    "dtoPort": {
+      "dto": ["PARAMETER", "RETURN"]
+    },
+    "httpService": {
+      "dtoPort": ["IMPLEMENTS"],
+      "dto": ["RETURN"],
+      "httpClient": ["CONSTRUCTOR"]
+    },
+    "storagePort": {
+      "dto": ["PARAMETER", "RETURN"]
+    },
+    "storage": {
+      "storagePort": ["IMPLEMENTS"],
+      "dto": ["PROPERTY", "PARAMETER", "RETURN"]
+    },
+    "eventPort": {
+      "event": ["PARAMETER"]
+    },
+    "eventDispatcher": {
+      "eventPort": ["IMPLEMENTS"]
+    },
+    "eventListener": {
+      "commandPort": ["CONSTRUCTOR"]
+    }
+  },
+  "external": {
+    "httpClient": {
+      "type": "HttpClient",
+      "module": "@angular/common/http"
+    },
+    "activatedRoute": {
+      "type": "ActivatedRoute",
+      "module": "@angular/router"
+    },
+    "router": {
+      "type": "Router",
+      "module": "@angular/router"
+    }
+  },
+  "entities": {
+    "page": {
+      "type": "ANGULAR_COMPONENT"
+    },
+    "component": {
+      "type": "ANGULAR_COMPONENT",
+      "folder": "ui",
+      "insideOf": "Lib"
+    },
+    "domain": {
+      "type": "DATA_STRUCTURE",
+      "folder": "application/domain",
+      "insideOf": "Lib"
+    },
+    "dto": {
+      "type": "DATA_STRUCTURE",
+      "folder": "application/infrastructure/dto",
+      "insideOf": "Lib"
+    },
+    "dtoPort": {
+      "type": "ABSTRACTION",
+      "folder": "application/infrastructure/dto",
+      "insideOf": "Lib"
+    },
+    "httpService": {
+      "type": "ANGULAR_SERVICE",
+      "folder": "infrastructure/http",
+      "insideOf": "Lib"
+    },
+    "httpResponse": {
+      "type": "DATA_STRUCTURE",
+      "folder": "infrastructure/http/response",
+      "insideOf": "Lib"
+    },
+    "storagePort": {
+      "type": "ABSTRACTION",
+      "folder": "application/infrastructure/storage",
+      "insideOf": "Lib"
+    },
+    "storage": {
+      "type": "ANGULAR_SERVICE",
+      "folder": "infrastructure/storage",
+      "insideOf": "Lib"
+    },
+    "event": {
+      "type": "DATA_STRUCTURE",
+      "folder": "application/infrastructure/event",
+      "insideOf": "Lib"
+    },
+    "eventPort": {
+      "type": "ABSTRACTION",
+      "folder": "application/infrastructure/event",
+      "insideOf": "Lib"
+    },
+    "eventDispatcher": {
+      "type": "ANGULAR_SERVICE",
+      "folder": "infrastructure/event-dispatcher",
+      "insideOf": "Lib"
+    },
+    "eventListener": {
+      "type": "ANGULAR_SERVICE",
+      "folder": "ui/event-listener",
+      "insideOf": "Lib"
+    },
+    "query": {
+      "type": "DATA_STRUCTURE",
+      "folder": "application/ui/query",
+      "insideOf": "Lib"
+    },
+    "queryPort": {
+      "type": "ABSTRACTION",
+      "folder": "application/ui/query",
+      "insideOf": "Lib"
+    },
+    "command": {
+      "type": "DATA_STRUCTURE",
+      "folder": "application/ui/command",
+      "insideOf": "Lib"
+    },
+    "commandPort": {
+      "type": "ABSTRACTION",
+      "folder": "application/ui/command",
+      "insideOf": "Lib"
+    },
+    "state": {
+      "type": "ANGULAR_SERVICE",
+      "folder": "application",
+      "insideOf": "Lib"
+    },
+    "directive": {
+      "type": "ANGULAR_DIRECTIVE",
+      "folder": "ui/directive",
+      "insideOf": "Lib"
+    },
+    "resolver": {
+      "type": "ANGULAR_RESOLVER",
+      "folder": "ui/resolver",
+      "insideOf": "Lib"
+    },
+    "guard": {
+      "type": "ANGULAR_GUARD",
+      "folder": "ui/guard",
+      "insideOf": "Lib"
+    }
+  }
+}
+

@@ -1,0 +1,18 @@
+<mat-list *ngIf='productsList$ | push as list; else loading' role="list" class="mat-elevation-z8">
+  <ng-container *ngIf='list.length; else emptyList'>
+    <mat-list-item role="listitem" *ngFor="let item of list">
+      <a style="width: 100%" (click)="navigateToDetails(item.id)">
+        {{item.title}}
+      </a>
+      {{item.price}}$
+      <button style="margin-left: 1rem" mat-button color="link" (click)="navigateToDetails(item.id)">Details</button>
+      <button style="margin-left: 1rem" mat-button color="warn" (click)="removeProduct(item.id)">Delete</button>
+    </mat-list-item>
+  </ng-container>
+  <ng-template #emptyList>
+    <p>Sorry, no results :)</p>
+  </ng-template>
+</mat-list>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

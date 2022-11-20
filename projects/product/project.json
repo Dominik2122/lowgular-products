@@ -1,0 +1,27 @@
+{
+	"projectType": "library",
+	"root": "projects/product",
+	"sourceRoot": "projects/product/src",
+	"prefix": "lib",
+	"architect": {
+		"test": {
+			"builder": "@nrwl/jest:jest",
+			"outputs": [
+				"coverage/product"
+			],
+			"options": {
+				"jestConfig": "projects/product/jest.config.js",
+				"passWithNoTests": true
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"options": {
+				"lintFilePatterns": [
+					"/projects/product/**/*.ts",
+					"/projects/product/**/*.html"
+				]
+			}
+		}
+	}
+}

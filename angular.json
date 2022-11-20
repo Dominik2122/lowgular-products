@@ -1,8 +1,9 @@
 {
-  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
-  "version": 2,
-  "projects": {
-    "app": "apps/app",
-    "app-e2e": "apps/app-e2e"
-  }
+	"$schema": "./node_modules/nx/schemas/workspace-schema.json",
+	"version": 2,
+	"projects": {
+		"app": "apps/app",
+		"product": "projects/product",
+		"shared": "projects/shared"
+	}
 }
